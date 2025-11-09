@@ -64,6 +64,38 @@ stats_result_t print_real_time_stats(TickType_t xTicksToWait)
     UBaseType_t start_array_size, end_array_size;
     configRUN_TIME_COUNTER_TYPE start_run_time, end_run_time;
 
+    // Get total and free heap (all dynamic memory)
+    size_t total_heap = heap_caps_get_total_size(MALLOC_CAP_DEFAULT);
+    size_t free_heap = esp_get_free_heap_size();
+
+    // Internal SRAM only
+    size_t total_internal = heap_caps_get_total_size(MALLOC_CAP_INTERNAL);
+    size_t free_internal = heap_caps_get_free_size(MALLOC_CAP_INTERNAL);
+
+    // PSRAM (if available)
+    size_t total_psram = heap_caps_get_total_size(MALLOC_CAP_SPIRAM);
+    size_t free_psram = heap_caps_get_free_size(MALLOC_CAP_SPIRAM);
+
+    // Avoid division by zero
+    float heap_percent = total_heap ? (100.0 * free_heap / total_heap) : 0;
+    float internal_percent = total_internal ? (100.0 * free_internal / total_internal) : 0;
+    float psram_percent = total_psram ? (100.0 * free_psram / total_psram) : 0;
+
+    char *memory_json = strdup("{ \"error\": \"Not enough memory to build JSON\" }");
+    if (err_json)
+    {
+        if (xQueueSend(jsonQueue, &err_json, 0) != pdPASS)
+        {
+            free(err_json);
+        }
+    }
+
+
+
+    ESP_LOGI("MEM", "Heap: %.2f%% free (%d / %d bytes)", heap_percent, free_heap, total_heap);
+    ESP_LOGI("MEM", "Internal SRAM: %.2f%% free (%d / %d bytes)", internal_percent, free_internal, total_internal);
+    ESP_LOGI("MEM", "PSRAM: %.2f%% free (%d / %d bytes)", psram_percent, free_psram, total_psram);
+
     do {
         start_array_size = uxTaskGetNumberOfTasks() + ARRAY_SIZE_OFFSET;
         start_array = malloc(sizeof(TaskStatus_t) * start_array_size);
