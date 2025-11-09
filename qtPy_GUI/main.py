@@ -132,6 +132,17 @@ class MainWindow(QMainWindow):
         usage_layout.addWidget(self.core1_label)
         layout.addLayout(usage_layout)
 
+        # ---- Memory usage labels ----
+        mem_layout = QHBoxLayout()
+        self.heap_label = QLabel("Heap: 0 / 0 (0%)")
+        self.internal_label = QLabel("Internal: 0 / 0 (0%)")
+        self.heap_label.setStyleSheet("background-color: #800000; color: white; padding: 6px; border-radius: 5px;")
+        self.internal_label.setStyleSheet("background-color: #A0522D; color: white; padding: 6px; border-radius: 5px;")
+
+        mem_layout.addWidget(self.heap_label)
+        mem_layout.addWidget(self.internal_label)
+        layout.addLayout(mem_layout)
+
         # ---- Sorting radio buttons ----
         radio_layout = QHBoxLayout()
         sort_label = QLabel("Sort by:")
@@ -187,11 +198,36 @@ class MainWindow(QMainWindow):
 
     # ---------------- DATA HANDLING ----------------
     def update_data(self, data):
+        # ---- Memory data ----
+        if "heap_total" in data and "heap_free" in data:
+            heap_total = data.get("heap_total", 0)
+            heap_free = data.get("heap_free", 0)
+            internal_total = data.get("internal_total", 0)
+            internal_free = data.get("internal_free", 0)
+
+            # Calculate used memory and percentages
+            heap_used = heap_total - heap_free
+            internal_used = internal_total - internal_free
+
+            heap_percent_used = (heap_used / heap_total * 100) if heap_total else 0
+            internal_percent_used = (internal_used / internal_total * 100) if internal_total else 0
+
+            # Update labels (showing free/total and percent used)
+            self.heap_label.setText(
+                f"Heap: {heap_total - heap_free} / {heap_total}  ({heap_percent_used:.1f}%)"
+            )
+            self.internal_label.setText(
+                f"Internal: {internal_total - internal_free} / {internal_total}  ({internal_percent_used:.1f}%)"
+            )
+            return
+
+        # ---- Task data ----
         if "tasks" not in data:
             return
 
         self.latest_tasks = data["tasks"]
-        self.apply_sorting()  # Update and apply current sort mode
+        self.apply_sorting()
+
 
     def apply_sorting(self):
         if not self.latest_tasks:
