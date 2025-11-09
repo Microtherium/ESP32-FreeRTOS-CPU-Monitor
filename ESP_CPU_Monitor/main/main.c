@@ -26,11 +26,16 @@ void custom_user_printf(char *received_json);
 // --------------------------------------------------------------------
 void app_main(void)
 {
+  char* micro_name = "ESP32";
 
-    CPU_usage_start(custom_user_printf);
+  CPU_usage_start(micro_name, custom_user_printf);
 
-  xTaskCreatePinnedToCore(dummy_task, "dummy task", 2048, NULL,
-                                    2, NULL, 1);
+  xTaskCreatePinnedToCore(dummy_task, "dummy task", 2048, NULL, 2, NULL, 1);
+
+  if (strcmp(micro_name, "STM32") == 0)
+  {
+    vTaskStartScheduler();
+  }
 
 }
 

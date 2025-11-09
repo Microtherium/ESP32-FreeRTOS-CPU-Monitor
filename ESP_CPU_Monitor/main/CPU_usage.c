@@ -14,15 +14,8 @@ QueueHandle_t jsonQueue;
 
 
 
-void CPU_usage_start(void (*custom_user_printf)(char *))
+void CPU_usage_start(char* micro_name, void (*custom_user_printf)(char *))
 {
-
-    //  printf("FreeRTOS Real-Time CPU Usage Example\n");
-
-    // if (user_printf == NULL)
-    // {
-    //     user_printf = printf;
-    // }
 
     #if CPU_LOAD
 
@@ -31,8 +24,17 @@ void CPU_usage_start(void (*custom_user_printf)(char *))
         // Create spin tasks
         for (int i = 0; i < NUM_OF_SPIN_TASKS; i++) {
             snprintf(task_names[i], sizeof(task_names[i]), "spin%d", i);
-            xTaskCreatePinnedToCore(spin_task, task_names[i], 2048, NULL,
+            if (strcmp(micro_name, "ESP32") == 0)
+            {            
+                xTaskCreatePinnedToCore(spin_task, task_names[i], 2048, NULL,
                                     SPIN_TASK_PRIO, NULL, 1);
+            }
+            else if (strcmp(micro_name, "STM32") == 0)
+            {
+                xTaskCreate(spin_task, task_names[i], 2048, NULL,
+                                    SPIN_TASK_PRIO, NULL);
+            }
+
         }
 
     #endif
@@ -48,11 +50,20 @@ void CPU_usage_start(void (*custom_user_printf)(char *))
     }
 
     // Create and start stats task
-    xTaskCreatePinnedToCore(stats_task, "stats", 4096, NULL,
+    if (strcmp(micro_name, "ESP32") == 0)
+    {
+        xTaskCreatePinnedToCore(stats_task, "stats", 4096, NULL,
                             STATS_TASK_PRIO, NULL, 1);
-    
-    xTaskCreatePinnedToCore(uart_print_task, "uart print task", 4096, custom_user_printf,
+        xTaskCreatePinnedToCore(uart_print_task, "uart print task", 4096, custom_user_printf,
                             UART_PRINT_TASK, NULL, 1);
+    }
+    else if (strcmp(micro_name, "STM32") == 0)
+    {
+        xTaskCreate(stats_task, "stats", 4096, NULL,
+                            STATS_TASK_PRIO, NULL);
+        xTaskCreate(uart_print_task, "uart print task", 4096, custom_user_printf,
+                            UART_PRINT_TASK, NULL);
+    }
 
     xSemaphoreGive(sync_stats_task);
 

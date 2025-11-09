@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "ESP_CPU_Monitor",
-    "project_version":    "170faa7-dirty",
+    "project_version":    "60ea80e-dirty",
     "project_path":       "E:/projects/ESP32/ESP32_FreeRTOS_CPU_Monitor/ESP32-FreeRTOS-CPU-Monitor/ESP_CPU_Monitor",
     "idf_path":           "C:/Users/moham/esp/v5.5.1/esp-idf",
     "build_dir":          "E:/projects/ESP32/ESP32_FreeRTOS_CPU_Monitor/ESP32-FreeRTOS-CPU-Monitor/ESP_CPU_Monitor/build",
