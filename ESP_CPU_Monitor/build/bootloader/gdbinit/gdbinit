@@ -1,0 +1,2 @@
+source E:/projects/ESP32/ESP32_FreeRTOS_CPU_Monitor/ESP32-FreeRTOS-CPU-Monitor/ESP_CPU_Monitor/build/bootloader/gdbinit/symbols
+source E:/projects/ESP32/ESP32_FreeRTOS_CPU_Monitor/ESP32-FreeRTOS-CPU-Monitor/ESP_CPU_Monitor/build/bootloader/gdbinit/connect
