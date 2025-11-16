@@ -1,0 +1,2 @@
+source E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/bootloader/gdbinit/symbols
+source E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/bootloader/gdbinit/connect
