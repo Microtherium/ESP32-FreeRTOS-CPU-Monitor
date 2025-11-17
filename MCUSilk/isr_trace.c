@@ -80,7 +80,7 @@ void ISR_uart_print_task(void *custom_user_printf)
                 continue;
 
             snprintf(json, 128,
-                     "{\"tag\":%lu,\"start_cycles\":%.2f}",
+                     "{\"tag\":%lu,\"duration\":%.5f}",
                      received_record.tag,
                     ((float)received_record.duration_cycles * 1000000.0f) / CPU_hz);
 

@@ -67,14 +67,18 @@ class MainWindow(QMainWindow):
 
         self.settings_tab = QWidget()
         self.monitor_tab = QWidget()
+        self.interrupts_tab = QWidget()
+        
         self.tabs.addTab(self.settings_tab, "Settings")
         self.tabs.addTab(self.monitor_tab, "Monitor")
+        self.tabs.addTab(self.interrupts_tab, "Interrupts")
 
         self.serial_thread = None
         self.latest_tasks = []
 
         self.init_settings_tab()
         self.init_monitor_tab()
+        self.init_interrupts_tab()
 
     # ---------------- SETTINGS TAB ----------------
     def init_settings_tab(self):
@@ -175,6 +179,18 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.table)
         self.monitor_tab.setLayout(layout)
 
+    
+    def init_interrupts_tab(self):
+        layout = QVBoxLayout()
+
+        # Interrupt Table: 2 columns (Tag, Start Cycles)
+        self.interrupt_table = QTableWidget(0, 2)
+        self.interrupt_table.setHorizontalHeaderLabels(["Tag", "Duration (µs)"])
+
+        layout.addWidget(self.interrupt_table)
+        self.interrupts_tab.setLayout(layout)
+
+
     # ---------------- SERIAL HANDLING ----------------
     def start_serial(self):
         port = self.port_combo.currentText()
@@ -198,6 +214,16 @@ class MainWindow(QMainWindow):
 
     # ---------------- DATA HANDLING ----------------
     def update_data(self, data):
+        # ---- Interrupt data ----
+        if "tag" in data and "duration" in data:
+            row = self.interrupt_table.rowCount()
+            self.interrupt_table.insertRow(row)
+
+            self.interrupt_table.setItem(row, 0, QTableWidgetItem(str(data["tag"])))
+            self.interrupt_table.setItem(row, 1, QTableWidgetItem(f"{data['duration']:.5f}"))
+
+            return
+        
         # ---- Memory data ----
         if "heap_total" in data and "heap_free" in data:
             heap_total = data.get("heap_total", 0)
