@@ -72,7 +72,7 @@ class MainWindow(QMainWindow):
 
         # THEN add them to the tab widget
         self.tabs.addTab(self.settings_tab, "Settings")
-        self.tabs.addTab(self.monitor_tab, "Monitor")
+        self.tabs.addTab(self.monitor_tab, "CPU & Memory Monitor")
         self.tabs.addTab(self.interrupts_tab, "Interrupts")
 
         self.serial_thread = None
