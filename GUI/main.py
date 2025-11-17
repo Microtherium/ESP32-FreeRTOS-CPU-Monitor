@@ -65,10 +65,12 @@ class MainWindow(QMainWindow):
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
 
+        # MUST CREATE ALL THREE TABS FIRST
         self.settings_tab = QWidget()
         self.monitor_tab = QWidget()
-        self.interrupts_tab = QWidget()
-        
+        self.interrupts_tab = QWidget()   # <-- this must exist before addTab()
+
+        # THEN add them to the tab widget
         self.tabs.addTab(self.settings_tab, "Settings")
         self.tabs.addTab(self.monitor_tab, "Monitor")
         self.tabs.addTab(self.interrupts_tab, "Interrupts")
@@ -76,6 +78,7 @@ class MainWindow(QMainWindow):
         self.serial_thread = None
         self.latest_tasks = []
 
+        # Initialize UI content for each tab AFTER assigning widgets
         self.init_settings_tab()
         self.init_monitor_tab()
         self.init_interrupts_tab()
@@ -183,12 +186,25 @@ class MainWindow(QMainWindow):
     def init_interrupts_tab(self):
         layout = QVBoxLayout()
 
-        # Interrupt Table: 2 columns (Tag, Start Cycles)
-        self.interrupt_table = QTableWidget(0, 2)
-        self.interrupt_table.setHorizontalHeaderLabels(["Tag", "Duration (µs)"])
+        # A QTabWidget to hold tables for each tag
+        self.interrupt_tabs = QTabWidget()
 
-        layout.addWidget(self.interrupt_table)
+        # Dictionary: tag -> table widget
+        self.interrupt_tables = {}
+
+        layout.addWidget(self.interrupt_tabs)
         self.interrupts_tab.setLayout(layout)
+    
+    def create_interrupt_subtab(self, tag):
+        # Create table for this tag
+        table = QTableWidget(0, 2)
+        table.setHorizontalHeaderLabels(["Tag", "Start Cycles"])
+
+        # Add tab
+        self.interrupt_tabs.addTab(table, f"Tag {tag}")
+
+        # Save reference
+        self.interrupt_tables[tag] = table
 
 
     # ---------------- SERIAL HANDLING ----------------
@@ -214,13 +230,22 @@ class MainWindow(QMainWindow):
 
     # ---------------- DATA HANDLING ----------------
     def update_data(self, data):
+        # print("DEBUG incoming:", data)
         # ---- Interrupt data ----
         if "tag" in data and "duration" in data:
-            row = self.interrupt_table.rowCount()
-            self.interrupt_table.insertRow(row)
+            tag = int(data["tag"])
+            duration = float(data["duration"])
 
-            self.interrupt_table.setItem(row, 0, QTableWidgetItem(str(data["tag"])))
-            self.interrupt_table.setItem(row, 1, QTableWidgetItem(f"{data['duration']:.5f}"))
+            # Create a new sub-tab if it does not exist
+            if tag not in self.interrupt_tables:
+                self.create_interrupt_subtab(tag)
+
+            table = self.interrupt_tables[tag]
+            row = table.rowCount()
+
+            table.insertRow(row)
+            table.setItem(row, 0, QTableWidgetItem(str(tag)))
+            table.setItem(row, 1, QTableWidgetItem(f"{duration:.5f}"))
 
             return
         
