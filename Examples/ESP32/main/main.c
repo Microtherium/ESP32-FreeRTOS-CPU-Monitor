@@ -15,7 +15,10 @@
 #include "esp_err.h"
 #include "esp_system.h"
 
+
+
 #include "../../../MCUSilk/CPU_usage.h"
+#include "../../../MCUSilk/isr_trace.h"
 
 
 #define BUTTON_GPIO     GPIO_NUM_0   // BOOT button
@@ -77,9 +80,15 @@ void custom_user_printf(char *received_json)
 
 static void IRAM_ATTR button_isr_handler(void* arg)
 {
-    // Toggle LED
-    led_state = !led_state;
-    gpio_set_level(LED_GPIO, led_state);
+
+  ISR_Trace_Enter(0);
+  
+  // Toggle LED
+  led_state = !led_state;
+  gpio_set_level(LED_GPIO, led_state);
+
+  ISR_Trace_Exit(0);
+
 }
 
 void button_LED_interrupt_initilize(void)

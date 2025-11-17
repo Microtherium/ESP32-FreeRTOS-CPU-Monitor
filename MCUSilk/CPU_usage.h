@@ -8,16 +8,21 @@
 #include "esp_system.h"
 #include "esp_heap_caps.h"
 #include "esp_log.h"
+#include "esp_private/esp_clk.h"
+
+
+#include "isr_trace.h"
 
 
 // --------------------------------------------------------------------
 // Configuration (shared between files)
 // --------------------------------------------------------------------
 
-#define SPIN_TASK_PRIO      2
-#define STATS_TASK_PRIO     5
-#define UART_PRINT_TASK     2
-#define ARRAY_SIZE_OFFSET   5
+#define SPIN_TASK_PRIO          2
+#define STATS_TASK_PRIO         5
+#define ISR_UART_PRINT_PRIO     2
+#define UART_PRINT_TASK_PRIO    2
+#define ARRAY_SIZE_OFFSET       5
 
 // Changable
 #define NUM_OF_SPIN_TASKS   3
@@ -33,7 +38,7 @@
 extern SemaphoreHandle_t sync_spin_task;
 extern SemaphoreHandle_t sync_stats_task;
 extern char task_names[NUM_OF_SPIN_TASKS][16];
-extern QueueHandle_t jsonQueue;
+extern QueueHandle_t jsonQueue, ISRQueue;
 
 // --------------------------------------------------------------------
 // Structs

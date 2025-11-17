@@ -1,6 +1,7 @@
 #include "CPU_usage.h"
 
 
+
 // --------------------------------------------------------------------
 // Globals
 // --------------------------------------------------------------------
@@ -9,14 +10,14 @@
     SemaphoreHandle_t sync_spin_task;
 #endif
 SemaphoreHandle_t sync_stats_task;
-QueueHandle_t jsonQueue;
-
+QueueHandle_t jsonQueue, ISRQueue;
 
 #define CONFIG_FREERTOS_NUMBER_OF_CORES 2
 
 
 void CPU_usage_start(const cpu_usage_cfg_t *cfg)
 {
+
     // optional: keep a local pointer to the user print fn
     void (*user_print)(char *) = NULL;
 
@@ -47,12 +48,26 @@ void CPU_usage_start(const cpu_usage_cfg_t *cfg)
         }
     }
 
+    ISRQueue = xQueueCreate(5, sizeof(isr_trace_record_t));
+    if (ISRQueue == NULL)
+    {
+        while(1)
+        {
+        }
+    }
+
     // Create and start stats task
     xTaskCreatePinnedToCore(stats_task, "stats", 4096, NULL,
                             STATS_TASK_PRIO, NULL, 1);
     
     xTaskCreatePinnedToCore(uart_print_task, "uart print task", 4096, (void *)user_print,
-                            UART_PRINT_TASK, NULL, 1);
+                            UART_PRINT_TASK_PRIO, NULL, 1);
+
+
+    xTaskCreatePinnedToCore(ISR_uart_print_task, "ISR uart print task", 4096, (void *)user_print,
+                            ISR_UART_PRINT_PRIO, NULL, 1);
+
+
 
     xSemaphoreGive(sync_stats_task);
 
