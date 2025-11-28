@@ -1,0 +1,9 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "../../../MCUSilk/CPU_usage.c"
+        "../../../MCUSilk/isr_trace.c"
+    INCLUDE_DIRS
+        "."
+        "../../../MCUSilk"
+)
