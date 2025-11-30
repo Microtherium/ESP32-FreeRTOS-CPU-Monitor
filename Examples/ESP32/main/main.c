@@ -37,7 +37,7 @@ volatile bool led_state = false;
 // --------------------------------------------------------------------
 void dummy_task(void *arg);
 void custom_user_printf(char *received_json);
-static void IRAM_ATTR button_isr_handler(void* arg);
+static void button_isr_handler(void* arg);
 void button_LED_interrupt_initilize(void);
 // --------------------------------------------------------------------
 // Entry Point
