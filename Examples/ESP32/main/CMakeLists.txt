@@ -3,6 +3,7 @@ idf_component_register(
         "main.c"
         "../../../MCUSilk/CPU_usage.c"
         "../../../MCUSilk/isr_trace.c"
+        "../../../MCUSilk/AWS_WIFI.c"
     PRIV_REQUIRES spi_flash
     INCLUDE_DIRS
         "."

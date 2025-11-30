@@ -19,6 +19,7 @@
 
 #include "../../../MCUSilk/CPU_usage.h"
 #include "../../../MCUSilk/isr_trace.h"
+#include "../../../MCUSilk/AWS_WIFI.h"
 
 
 #define BUTTON_GPIO     GPIO_NUM_0   // BOOT button
@@ -44,15 +45,19 @@ void button_LED_interrupt_initilize(void);
 // --------------------------------------------------------------------
 void app_main(void)
 {
-  
-  // Initialize button and LED with interrupt
-  button_LED_interrupt_initilize();
 
+  
   // fill the config
   cpu_usage_cfg_t cpu_cfg = {
       .tag = "ESP32",           // whatever label you want
       .print_fn = custom_user_printf
   };
+
+  // Initialize button and LED with interrupt
+  button_LED_interrupt_initilize();
+
+  // Start AWS and WiFi
+  aws_and_wifi_start();
 
   // pass struct to init
   CPU_usage_start(&cpu_cfg);
