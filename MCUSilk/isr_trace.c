@@ -29,7 +29,7 @@ void IRAM_ATTR ISR_Trace_Exit(uint32_t tag)
     uint32_t end   = (uint32_t)esp_cpu_get_cycle_count();
     isr_trace[tag].duration_cycles =  end - isr_trace[tag].start_cycles;
 
-    xQueueSendFromISR(ISRQueue, &isr_trace[tag], NULL);
+    xQueueSendFromISR(ISRQueue, (void *)&isr_trace[tag], NULL);
 
 }
 

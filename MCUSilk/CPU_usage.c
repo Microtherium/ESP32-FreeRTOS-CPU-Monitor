@@ -1,4 +1,5 @@
 #include "CPU_usage.h"
+#include "../../../MCUSilk/AWS_WIFI.h"
 
 
 
@@ -17,6 +18,12 @@ QueueHandle_t jsonQueue, ISRQueue;
 
 void CPU_usage_start(const cpu_usage_cfg_t *cfg)
 {
+
+    if (cfg->enable_AWS_upload)
+    {
+        // Start AWS and WiFi
+        aws_and_wifi_start();
+    }
 
     // optional: keep a local pointer to the user print fn
     void (*user_print)(char *) = NULL;
@@ -170,7 +177,7 @@ stats_result_t print_real_time_stats(TickType_t xTicksToWait)
                     t.run_time = end_array[j].ulRunTimeCounter - start_array[i].ulRunTimeCounter;
                     t.percentage = (t.run_time * 100UL) /
                                    (total_elapsed_time * CONFIG_FREERTOS_NUMBER_OF_CORES);
-                    t.core_id = xTaskGetAffinity(end_array[j].xHandle);
+                    t.core_id = xTaskGetCoreID(end_array[j].xHandle);
                     result.tasks[result.task_count++] = t;
                     start_array[i].xHandle = NULL;
                     end_array[j].xHandle = NULL;

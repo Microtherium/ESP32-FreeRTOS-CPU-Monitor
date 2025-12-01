@@ -50,20 +50,17 @@ void app_main(void)
   // fill the config
   cpu_usage_cfg_t cpu_cfg = {
       .tag = "ESP32",           // whatever label you want
-      .print_fn = custom_user_printf
+      .print_fn = custom_user_printf,
+      .enable_AWS_upload = true
   };
 
   // Initialize button and LED with interrupt
   button_LED_interrupt_initilize();
 
-  // Start AWS and WiFi
-  aws_and_wifi_start();
-
   // pass struct to init
   CPU_usage_start(&cpu_cfg);
 
-  xTaskCreatePinnedToCore(dummy_task, "dummy task", 2048, NULL,
-                                    2, NULL, 1);
+  xTaskCreatePinnedToCore(dummy_task, "dummy task", 2048, NULL, 2, NULL, 1);
 
 
 }

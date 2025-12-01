@@ -22,6 +22,7 @@
 #define STATS_TASK_PRIO         5
 #define ISR_UART_PRINT_PRIO     2
 #define UART_PRINT_TASK_PRIO    2
+
 #define ARRAY_SIZE_OFFSET       5
 
 // Changable
@@ -62,6 +63,7 @@ typedef struct {
 typedef struct {
     const char *tag;
     void (*print_fn)(char *msg);
+    bool enable_AWS_upload;
 } cpu_usage_cfg_t;
 
 

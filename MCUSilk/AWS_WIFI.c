@@ -240,6 +240,7 @@ void mqtt_init(void) {
 // 5. MAIN
 // ==========================================
 void aws_and_wifi_start(void) {
+    
     // Init NVS
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
@@ -260,7 +261,8 @@ void aws_and_wifi_start(void) {
     mqtt_init();
 
     // Start publisher Task test
-    xTaskCreate(publisher_task, "publisher_task", 4096, NULL, 5, NULL);
+    xTaskCreatePinnedToCore(publisher_task, "publisher_task", 4096, NULL, 2, NULL, 1);
+    
 }
 
 // 
