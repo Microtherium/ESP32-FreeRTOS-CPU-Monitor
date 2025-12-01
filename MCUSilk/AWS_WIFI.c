@@ -261,8 +261,8 @@ void aws_and_wifi_start(void) {
     mqtt_init();
 
     // Start publisher Task test
-    xTaskCreatePinnedToCore(publisher_task, "publisher_task", 4096, NULL, 2, NULL, 1);
-    
+    xTaskCreatePinnedToCore(publisher_task, "publisher_task", 4096, NULL, 2, NULL, 0);
+
 }
 
 // 

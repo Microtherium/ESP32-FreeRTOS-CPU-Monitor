@@ -60,7 +60,8 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("ESP32 Task Monitor")
-        self.resize(450, 550)
+        # W*H
+        self.resize(450, 710)
 
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
@@ -312,7 +313,12 @@ class MainWindow(QMainWindow):
             self.table.setItem(i, 0, QTableWidgetItem(task["task_name"]))
             self.table.setItem(i, 1, QTableWidgetItem(str(task.get("run_time", 0))))
             self.table.setItem(i, 2, QTableWidgetItem(f"{task.get('percentage', 0)}%"))
-            self.table.setItem(i, 3, QTableWidgetItem(str(task.get("core", "-"))))
+            
+            core_val = task.get("core", -1)
+            if core_val != 0 and core_val != 1:
+                core_val = -1
+            self.table.setItem(i, 3, QTableWidgetItem(str(core_val)))
+            # self.table.setItem(i, 3, QTableWidgetItem(str(task.get("core", "-"))))
 
 
 
