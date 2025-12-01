@@ -14,8 +14,11 @@
 #include "esp_log.h"
 #include "esp_timer.h"
 #include "cJSON.h"
+#include "freertos/queue.h"
 
 static const char *TAG = "AWS_TASK_BASED";
+
+extern QueueHandle_t AWSQueue;
 
 // ==========================================
 // 1. CONFIGURATION
@@ -151,6 +154,9 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 // ==========================================
 void publisher_task(void *param)
 {
+
+    char *received_json = NULL;
+
     while (1) {
         // 1. WAIT: Pause here until BOTH Wi-Fi and MQTT are connected.
         //    If connection drops, this line blocks automatically.
@@ -160,27 +166,42 @@ void publisher_task(void *param)
                                                pdTRUE,  // Wait for ALL bits (AND logic)
                                                portMAX_DELAY);
 
-        // 2. PREPARE DATA: Create JSON payload
-        ESP_LOGI(TAG, "Generating Sensor Data...");
-        cJSON *root = cJSON_CreateObject();
-        cJSON_AddNumberToObject(root, "uptime", esp_timer_get_time() / 1000);
-        cJSON_AddStringToObject(root, "status", "Task Loop Running");
-        cJSON_AddNumberToObject(root, "random_val", rand() % 100);
-        
-        char *post_data = cJSON_PrintUnformatted(root);
 
-        // 3. PUBLISH: Send the data
-        if (client != NULL) {
-            int msg_id = esp_mqtt_client_publish(client, AWS_PUB_TOPIC, post_data, 0, 1, 0);
-            ESP_LOGI(TAG, "Published msg_id=%d, data=%s", msg_id, post_data);
+        if (xQueueReceive(AWSQueue, &received_json, portMAX_DELAY) == pdPASS)
+        {
+
+            if (client != NULL)
+            {
+                int msg_id = esp_mqtt_client_publish(client, AWS_PUB_TOPIC, received_json, 0, 1, 0);
+                ESP_LOGI(TAG, "Published msg_id=%d, data=%s", msg_id, received_json);
+            }
+
+            free(received_json);
+
         }
 
-        // 4. CLEANUP
-        cJSON_Delete(root);
-        free(post_data);
 
-        // 5. BLOCKING DELAY (Sleep for 5 seconds)
-        vTaskDelay(pdMS_TO_TICKS(5000));
+        // // 2. PREPARE DATA: Create JSON payload
+        // ESP_LOGI(TAG, "Generating Sensor Data...");
+        // cJSON *root = cJSON_CreateObject();
+        // cJSON_AddNumberToObject(root, "uptime", esp_timer_get_time() / 1000);
+        // cJSON_AddStringToObject(root, "status", "Task Loop Running");
+        // cJSON_AddNumberToObject(root, "random_val", rand() % 100);
+        
+        // char *post_data = cJSON_PrintUnformatted(root);
+
+        // // 3. PUBLISH: Send the data
+        // if (client != NULL) {
+        //     int msg_id = esp_mqtt_client_publish(client, AWS_PUB_TOPIC, post_data, 0, 1, 0);
+        //     ESP_LOGI(TAG, "Published msg_id=%d, data=%s", msg_id, post_data);
+        // }
+
+        // // 4. CLEANUP
+        // cJSON_Delete(root);
+        // free(post_data);
+
+        // // 5. BLOCKING DELAY (Sleep for 5 seconds)
+        // vTaskDelay(pdMS_TO_TICKS(5000));
     }
 }
 
@@ -264,29 +285,3 @@ void aws_and_wifi_start(void) {
     xTaskCreatePinnedToCore(publisher_task, "publisher_task", 4096, NULL, 2, NULL, 0);
 
 }
-
-// 
-// void app_main(void) {
-//     // Init NVS
-//     esp_err_t ret = nvs_flash_init();
-//     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-//         ESP_ERROR_CHECK(nvs_flash_erase());
-//         ret = nvs_flash_init();
-//     }
-//     ESP_ERROR_CHECK(ret);
-
-//     // Create the Event Group
-//     s_status_event_group = xEventGroupCreate();
-
-//     // Start Drivers
-    
-//     if (load_embedded_config() != ESP_OK) {
-//         return; 
-//     }
-
-//     wifi_init_sta();
-//     mqtt_init();
-
-//     // Start the Business Logic Task
-//     xTaskCreate(publisher_task, "publisher_task", 4096, NULL, 5, NULL);
-// }
