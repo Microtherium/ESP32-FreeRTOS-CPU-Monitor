@@ -4,6 +4,7 @@
 #include "freertos/FreeRTOS.h"
 #include "CPU_usage.h"
 
+extern QueueHandle_t AWSQueue;
 
 
 
@@ -65,9 +66,16 @@ void ISR_uart_print_task(void *custom_user_printf)
             {     
                 ((void (*)(char *))custom_user_printf)(json);
             }
-            
-            free(json);
 
+            if (AWSQueue)
+            {
+                if (xQueueSend(AWSQueue, &json, 0) == pdPASS) {}
+                else
+                {
+                    free(json);
+                }
+            }
+            
         }
     }
 }
