@@ -51,7 +51,7 @@ void app_main(void)
   cpu_usage_cfg_t cpu_cfg = {
       .tag = "ESP32",           // whatever label you want
       .print_fn = custom_user_printf,
-      .enable_AWS_upload = true
+      .enable_AWS_upload = false
   };
 
   // Initialize button and LED with interrupt
