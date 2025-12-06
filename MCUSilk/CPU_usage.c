@@ -1,4 +1,5 @@
 #include "CPU_usage.h"
+#include "../../../MCUSilk/AWS_WIFI.h"
 
 
 
@@ -10,7 +11,7 @@
     SemaphoreHandle_t sync_spin_task;
 #endif
 SemaphoreHandle_t sync_stats_task;
-QueueHandle_t jsonQueue, ISRQueue;
+QueueHandle_t jsonQueue, ISRQueue, AWSQueue;
 
 #define CONFIG_FREERTOS_NUMBER_OF_CORES 2
 
@@ -40,7 +41,7 @@ void CPU_usage_start(const cpu_usage_cfg_t *cfg)
 
     sync_stats_task = xSemaphoreCreateBinary();
     
-    jsonQueue = xQueueCreate(5, sizeof(char *));  // 5 messages max, each is a pointer to char*
+    jsonQueue = xQueueCreate(5, sizeof(char *));
     if (jsonQueue == NULL)
     {
         while(1)
@@ -54,6 +55,25 @@ void CPU_usage_start(const cpu_usage_cfg_t *cfg)
         while(1)
         {
         }
+    }
+
+    if (cfg->enable_AWS_upload)
+    {
+
+        AWSQueue = xQueueCreate(10, sizeof(char *));
+        if (AWSQueue == NULL)
+        {
+            while(1)
+            {
+            }
+        }
+
+        // Start AWS and WiFi
+        aws_and_wifi_start();
+    }
+    else
+    {
+        AWSQueue = NULL;
     }
 
     // Create and start stats task
@@ -170,7 +190,7 @@ stats_result_t print_real_time_stats(TickType_t xTicksToWait)
                     t.run_time = end_array[j].ulRunTimeCounter - start_array[i].ulRunTimeCounter;
                     t.percentage = (t.run_time * 100UL) /
                                    (total_elapsed_time * CONFIG_FREERTOS_NUMBER_OF_CORES);
-                    t.core_id = xTaskGetAffinity(end_array[j].xHandle);
+                    t.core_id = xTaskGetCoreID(end_array[j].xHandle);
                     result.tasks[result.task_count++] = t;
                     start_array[i].xHandle = NULL;
                     end_array[j].xHandle = NULL;
@@ -250,7 +270,8 @@ void uart_print_task(void *custom_user_printf)
     {
         // Wait until something arrives in the queue
         if (xQueueReceive(jsonQueue, &received_json, portMAX_DELAY) == pdPASS)
-        {
+        {            
+
             if (custom_user_printf == NULL)
             {
                 printf("%s\n", received_json);
@@ -260,8 +281,15 @@ void uart_print_task(void *custom_user_printf)
                 // Print the received JSON using the user-defined function
                 ((void (*)(char *))custom_user_printf)(received_json);
             }
-            
-            free(received_json);
+
+            if (AWSQueue)
+            {
+                if (xQueueSend(AWSQueue, &received_json, 0) == pdPASS) {}
+                else
+                {
+                    free(received_json);
+                }
+            }
 
         }
     }

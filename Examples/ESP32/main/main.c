@@ -19,6 +19,7 @@
 
 #include "../../../MCUSilk/CPU_usage.h"
 #include "../../../MCUSilk/isr_trace.h"
+#include "../../../MCUSilk/AWS_WIFI.h"
 
 
 #define BUTTON_GPIO     GPIO_NUM_0   // BOOT button
@@ -28,37 +29,34 @@
 volatile bool led_state = false;
 
 
-
-
-
-
 // --------------------------------------------------------------------
 // Function prototypes
 // --------------------------------------------------------------------
 void dummy_task(void *arg);
 void custom_user_printf(char *received_json);
-static void IRAM_ATTR button_isr_handler(void* arg);
+static void button_isr_handler(void* arg);
 void button_LED_interrupt_initilize(void);
 // --------------------------------------------------------------------
 // Entry Point
 // --------------------------------------------------------------------
 void app_main(void)
 {
-  
-  // Initialize button and LED with interrupt
-  button_LED_interrupt_initilize();
 
+  
   // fill the config
   cpu_usage_cfg_t cpu_cfg = {
       .tag = "ESP32",           // whatever label you want
-      .print_fn = custom_user_printf
+      .print_fn = custom_user_printf,
+      .enable_AWS_upload = true
   };
+
+  // Initialize button and LED with interrupt
+  button_LED_interrupt_initilize();
 
   // pass struct to init
   CPU_usage_start(&cpu_cfg);
 
-  xTaskCreatePinnedToCore(dummy_task, "dummy task", 2048, NULL,
-                                    2, NULL, 1);
+  xTaskCreatePinnedToCore(dummy_task, "dummy task", 2048, NULL, 2, NULL, 1);
 
 
 }

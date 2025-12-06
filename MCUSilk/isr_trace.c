@@ -4,6 +4,7 @@
 #include "freertos/FreeRTOS.h"
 #include "CPU_usage.h"
 
+extern QueueHandle_t AWSQueue;
 
 
 
@@ -29,7 +30,7 @@ void IRAM_ATTR ISR_Trace_Exit(uint32_t tag)
     uint32_t end   = (uint32_t)esp_cpu_get_cycle_count();
     isr_trace[tag].duration_cycles =  end - isr_trace[tag].start_cycles;
 
-    xQueueSendFromISR(ISRQueue, &isr_trace[tag], NULL);
+    xQueueSendFromISR(ISRQueue, (void *)&isr_trace[tag], NULL);
 
 }
 
@@ -65,9 +66,16 @@ void ISR_uart_print_task(void *custom_user_printf)
             {     
                 ((void (*)(char *))custom_user_printf)(json);
             }
-            
-            free(json);
 
+            if (AWSQueue)
+            {
+                if (xQueueSend(AWSQueue, &json, 0) == pdPASS) {}
+                else
+                {
+                    free(json);
+                }
+            }
+            
         }
     }
 }

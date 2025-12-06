@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "ESP32",
-    "project_version":    "a6c87c3-dirty",
+    "project_version":    "ee152b9-dirty",
     "project_path":       "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32",
     "idf_path":           "C:/Users/moham/esp/v5.5.1/esp-idf",
     "build_dir":          "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build",
@@ -21,12 +21,12 @@
     "monitor_toolprefix": "xtensa-esp32-elf-",
     "c_compiler":         "C:/Users/moham/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_common/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_gpio/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_hw_support/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_mm/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_partition/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_pm/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_rom/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_security/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_system/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_timer/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/freertos/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/hal/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/heap/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/log/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/mbedtls/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/pthread/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/soc/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS" : "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp-tls/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_coex/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_common/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_gpio/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_uart/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_usb_serial_jtag/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_event/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_hw_support/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_mm/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_partition/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_phy/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_pm/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_ringbuf/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_rom/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_security/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_system/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_timer/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/freertos/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/hal/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/heap/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/log/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/mbedtls/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/mqtt/esp-mqtt/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/pthread/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/soc/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/tcp_transport/Kconfig;C:/Users/moham/esp/v5.5.1/esp-idf/components/vfs/Kconfig",
         "COMPONENT_KCONFIGS_PROJBUILD" : "C:/Users/moham/esp/v5.5.1/esp-idf/components/bootloader/Kconfig.projbuild;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_app_format/Kconfig.projbuild;C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_rom/Kconfig.projbuild;C:/Users/moham/esp/v5.5.1/esp-idf/components/esptool_py/Kconfig.projbuild;C:/Users/moham/esp/v5.5.1/esp-idf/components/partition_table/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "newlib", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "xtensa" ],
-    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "efuse", "esp_app_format", "esp_bootloader_format", "esp_common", "esp_driver_gpio", "esp_hw_support", "esp_mm", "esp_partition", "esp_pm", "esp_rom", "esp_security", "esp_system", "esp_timer", "esptool_py", "freertos", "hal", "heap", "log", "main", "mbedtls", "newlib", "partition_table", "pthread", "soc", "spi_flash", "xtensa", "" ],
-    "build_component_paths" : [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/app_update", "C:/Users/moham/esp/v5.5.1/esp-idf/components/bootloader", "C:/Users/moham/esp/v5.5.1/esp-idf/components/bootloader_support", "C:/Users/moham/esp/v5.5.1/esp-idf/components/cxx", "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_app_format", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_bootloader_format", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_common", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_gpio", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_hw_support", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_mm", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_partition", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_pm", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_rom", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_security", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_system", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_timer", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esptool_py", "C:/Users/moham/esp/v5.5.1/esp-idf/components/freertos", "C:/Users/moham/esp/v5.5.1/esp-idf/components/hal", "C:/Users/moham/esp/v5.5.1/esp-idf/components/heap", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/main", "C:/Users/moham/esp/v5.5.1/esp-idf/components/mbedtls", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib", "C:/Users/moham/esp/v5.5.1/esp-idf/components/partition_table", "C:/Users/moham/esp/v5.5.1/esp-idf/components/pthread", "C:/Users/moham/esp/v5.5.1/esp-idf/components/soc", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash", "C:/Users/moham/esp/v5.5.1/esp-idf/components/xtensa", "" ],
+    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "efuse", "esp-tls", "esp_app_format", "esp_bootloader_format", "esp_coex", "esp_common", "esp_driver_gpio", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_event", "esp_hw_support", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_ringbuf", "esp_rom", "esp_security", "esp_system", "esp_timer", "esp_vfs_console", "esp_wifi", "esptool_py", "freertos", "hal", "heap", "http_parser", "json", "log", "lwip", "main", "mbedtls", "mqtt", "newlib", "nvs_flash", "partition_table", "pthread", "soc", "spi_flash", "tcp_transport", "vfs", "wpa_supplicant", "xtensa", "" ],
+    "build_component_paths" : [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/app_update", "C:/Users/moham/esp/v5.5.1/esp-idf/components/bootloader", "C:/Users/moham/esp/v5.5.1/esp-idf/components/bootloader_support", "C:/Users/moham/esp/v5.5.1/esp-idf/components/cxx", "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp-tls", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_app_format", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_bootloader_format", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_coex", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_common", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_gpio", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_uart", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_usb_serial_jtag", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_event", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_hw_support", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_mm", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif_stack", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_partition", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_phy", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_pm", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_ringbuf", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_rom", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_security", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_system", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_timer", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_vfs_console", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esptool_py", "C:/Users/moham/esp/v5.5.1/esp-idf/components/freertos", "C:/Users/moham/esp/v5.5.1/esp-idf/components/hal", "C:/Users/moham/esp/v5.5.1/esp-idf/components/heap", "C:/Users/moham/esp/v5.5.1/esp-idf/components/http_parser", "C:/Users/moham/esp/v5.5.1/esp-idf/components/json", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/main", "C:/Users/moham/esp/v5.5.1/esp-idf/components/mbedtls", "C:/Users/moham/esp/v5.5.1/esp-idf/components/mqtt", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash", "C:/Users/moham/esp/v5.5.1/esp-idf/components/partition_table", "C:/Users/moham/esp/v5.5.1/esp-idf/components/pthread", "C:/Users/moham/esp/v5.5.1/esp-idf/components/soc", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash", "C:/Users/moham/esp/v5.5.1/esp-idf/components/tcp_transport", "C:/Users/moham/esp/v5.5.1/esp-idf/components/vfs", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant", "C:/Users/moham/esp/v5.5.1/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
         "app_update": {
             "alias": "idf::app_update",
@@ -103,6 +103,21 @@
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse/esp32/esp_efuse_table.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse/esp32/esp_efuse_fields.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse/esp32/esp_efuse_utility.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse/src/esp_efuse_api.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse/src/esp_efuse_fields.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse/src/esp_efuse_utility.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse/src/efuse_controller/keys/without_key_purposes/three_key_blocks/esp_efuse_api_key.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/efuse/src/esp_efuse_startup.c" ],
             "include_dirs": [ "include", "esp32/include" ]
         },
+        "esp-tls": {
+            "alias": "idf::esp-tls",
+            "target": "___idf_esp-tls",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp-tls",
+            "type": "LIBRARY",
+            "lib": "__idf_esp-tls",
+            "reqs": [ "mbedtls" ],
+            "priv_reqs": [ "http_parser", "esp_timer", "lwip" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp-tls/libesp-tls.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp-tls/esp_tls.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp-tls/esp-tls-crypto/esp_tls_crypto.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp-tls/esp_tls_error_capture.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp-tls/esp_tls_platform_port.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp-tls/esp_tls_mbedtls.c" ],
+            "include_dirs": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp-tls", "esp-tls-crypto" ]
+        },
         "esp_app_format": {
             "alias": "idf::esp_app_format",
             "target": "___idf_esp_app_format",
@@ -131,6 +146,21 @@
             "managed_priv_reqs": [],
             "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp_bootloader_format/libesp_bootloader_format.a",
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c" ],
+            "include_dirs": [ "include" ]
+        },
+        "esp_coex": {
+            "alias": "idf::esp_coex",
+            "target": "___idf_esp_coex",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_coex",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_coex",
+            "reqs": [],
+            "priv_reqs": [ "esp_timer", "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp_coex/libesp_coex.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_coex/esp32/esp_coex_adapter.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_coex/src/coexist_debug_diagram.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_coex/src/coexist_debug.c" ],
             "include_dirs": [ "include" ]
         },
         "esp_common": {
@@ -163,6 +193,51 @@
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_gpio/src/gpio.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_gpio/src/gpio_glitch_filter_ops.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_gpio/src/rtc_io.c" ],
             "include_dirs": [ "include" ]
         },
+        "esp_driver_uart": {
+            "alias": "idf::esp_driver_uart",
+            "target": "___idf_esp_driver_uart",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_uart",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_driver_uart",
+            "reqs": [],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio", "esp_ringbuf", "esp_mm" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp_driver_uart/libesp_driver_uart.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_uart/src/uart.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_uart/src/uart_wakeup.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_uart/src/uart_vfs.c" ],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_usb_serial_jtag": {
+            "alias": "idf::esp_driver_usb_serial_jtag",
+            "target": "___idf_esp_driver_usb_serial_jtag",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_driver_usb_serial_jtag",
+            "type": "CONFIG_ONLY",
+            "lib": "__idf_esp_driver_usb_serial_jtag",
+            "reqs": [],
+            "priv_reqs": [ "esp_driver_gpio", "esp_ringbuf", "esp_pm", "esp_timer" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "",
+            "sources": [],
+            "include_dirs": [ "include" ]
+        },
+        "esp_event": {
+            "alias": "idf::esp_event",
+            "target": "___idf_esp_event",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_event",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_event",
+            "reqs": [ "log", "esp_common", "freertos" ],
+            "priv_reqs": [ "esp_timer" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp_event/libesp_event.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_event/default_event_loop.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_event/esp_event.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_event/esp_event_private.c" ],
+            "include_dirs": [ "include" ]
+        },
         "esp_hw_support": {
             "alias": "idf::esp_hw_support",
             "target": "___idf_esp_hw_support",
@@ -193,6 +268,36 @@
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_mm/esp_mmu_map.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_mm/port/esp32/ext_mem_layout.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_mm/esp_cache_msync.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_mm/esp_cache_utils.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_mm/cache_esp32.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_mm/heap_align_hw.c" ],
             "include_dirs": [ "include" ]
         },
+        "esp_netif": {
+            "alias": "idf::esp_netif",
+            "target": "___idf_esp_netif",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_netif",
+            "reqs": [ "esp_event" ],
+            "priv_reqs": [ "esp_netif_stack" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp_netif/libesp_netif.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif/esp_netif_handlers.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif/esp_netif_objects.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif/esp_netif_defaults.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif/lwip/esp_netif_sntp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif/lwip/esp_netif_lwip_defaults.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif/lwip/netif/wlanif.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif/lwip/netif/ethernetif.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif/lwip/netif/esp_pbuf_ref.c" ],
+            "include_dirs": [ "include" ]
+        },
+        "esp_netif_stack": {
+            "alias": "idf::esp_netif_stack",
+            "target": "___idf_esp_netif_stack",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_netif_stack",
+            "type": "CONFIG_ONLY",
+            "lib": "__idf_esp_netif_stack",
+            "reqs": [ "lwip" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "",
+            "sources": [],
+            "include_dirs": []
+        },
         "esp_partition": {
             "alias": "idf::esp_partition",
             "target": "___idf_esp_partition",
@@ -208,6 +313,21 @@
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_partition/partition.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_partition/partition_target.c" ],
             "include_dirs": [ "include" ]
         },
+        "esp_phy": {
+            "alias": "idf::esp_phy",
+            "target": "___idf_esp_phy",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_phy",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_phy",
+            "reqs": [],
+            "priv_reqs": [ "nvs_flash", "esp_driver_gpio", "efuse", "esp_timer", "esp_wifi" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp_phy/libesp_phy.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_phy/src/phy_override.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_phy/src/lib_printf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_phy/src/phy_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_phy/src/phy_init.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_phy/esp32/phy_init_data.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_phy/src/btbb_init.c" ],
+            "include_dirs": [ "include", "esp32/include" ]
+        },
         "esp_pm": {
             "alias": "idf::esp_pm",
             "target": "___idf_esp_pm",
@@ -221,6 +341,21 @@
             "managed_priv_reqs": [],
             "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp_pm/libesp_pm.a",
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_pm/pm_locks.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_pm/pm_trace.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_pm/pm_impl.c" ],
+            "include_dirs": [ "include" ]
+        },
+        "esp_ringbuf": {
+            "alias": "idf::esp_ringbuf",
+            "target": "___idf_esp_ringbuf",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_ringbuf",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_ringbuf",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp_ringbuf/libesp_ringbuf.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_ringbuf/ringbuf.c" ],
             "include_dirs": [ "include" ]
         },
         "esp_rom": {
@@ -283,6 +418,36 @@
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_timer/src/esp_timer.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_timer/src/esp_timer_init.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_timer/src/ets_timer_legacy.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_timer/src/system_time.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_timer/src/esp_timer_impl_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_timer/src/esp_timer_impl_lac.c" ],
             "include_dirs": [ "include" ]
         },
+        "esp_vfs_console": {
+            "alias": "idf::esp_vfs_console",
+            "target": "___idf_esp_vfs_console",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_vfs_console",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_vfs_console",
+            "reqs": [],
+            "priv_reqs": [ "vfs", "esp_driver_uart", "esp_driver_usb_serial_jtag" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp_vfs_console/libesp_vfs_console.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_vfs_console/vfs_console.c" ],
+            "include_dirs": [ "include" ]
+        },
+        "esp_wifi": {
+            "alias": "idf::esp_wifi",
+            "target": "___idf_esp_wifi",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_wifi",
+            "reqs": [ "esp_event", "esp_phy", "esp_netif" ],
+            "priv_reqs": [ "esptool_py", "esp_pm", "esp_timer", "nvs_flash", "wpa_supplicant", "hal", "lwip", "esp_coex" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/esp_wifi/libesp_wifi.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/src/lib_printf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/src/mesh_event.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/src/smartconfig.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/src/wifi_init.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/src/wifi_default.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/src/wifi_netif.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/src/wifi_default_ap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/esp32/esp_adapter.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/regulatory/esp_wifi_regulatory.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp_wifi/src/smartconfig_ack.c" ],
+            "include_dirs": [ "include", "include/local", "wifi_apps/include", "wifi_apps/nan_app/include" ]
+        },
         "esptool_py": {
             "alias": "idf::esptool_py",
             "target": "___idf_esptool_py",
@@ -343,6 +508,36 @@
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/heap/heap_caps_base.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/heap/heap_caps.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/heap/heap_caps_init.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/heap/multi_heap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/heap/tlsf/tlsf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/heap/port/memory_layout_utils.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/heap/port/esp32/memory_layout.c" ],
             "include_dirs": [ "include", "tlsf" ]
         },
+        "http_parser": {
+            "alias": "idf::http_parser",
+            "target": "___idf_http_parser",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/http_parser",
+            "type": "LIBRARY",
+            "lib": "__idf_http_parser",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/http_parser/libhttp_parser.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/http_parser/http_parser.c" ],
+            "include_dirs": [ "." ]
+        },
+        "json": {
+            "alias": "idf::json",
+            "target": "___idf_json",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/json",
+            "type": "LIBRARY",
+            "lib": "__idf_json",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/json/libjson.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/json/cJSON/cJSON.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/json/cJSON/cJSON_Utils.c" ],
+            "include_dirs": [ "cJSON" ]
+        },
         "log": {
             "alias": "idf::log",
             "target": "___idf_log",
@@ -358,6 +553,21 @@
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/os/log_timestamp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/log_timestamp_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/os/log_lock.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/buffer/log_buffers.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/os/util.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/util.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/log_format_text.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/log_print.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/log.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/os/log_write.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/log_level/log_level.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/log_level/tag_log_level/tag_log_level.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/log_level/tag_log_level/linked_list/log_linked_list.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/log/src/log_level/tag_log_level/cache/log_binary_heap.c" ],
             "include_dirs": [ "include" ]
         },
+        "lwip": {
+            "alias": "idf::lwip",
+            "target": "___idf_lwip",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip",
+            "type": "LIBRARY",
+            "lib": "__idf_lwip",
+            "reqs": [],
+            "priv_reqs": [ "vfs" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/lwip/liblwip.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/apps/sntp/sntp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/api_lib.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/api_msg.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/err.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/if_api.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/netbuf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/netdb.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/netifapi.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/sockets.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/api/tcpip.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/apps/sntp/sntp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/apps/netbiosns/netbiosns.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/def.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/dns.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/inet_chksum.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/init.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ip.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/mem.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/memp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/netif.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/pbuf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/raw.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/stats.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/sys.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/tcp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/tcp_in.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/tcp_out.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/timeouts.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/udp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv4/autoip.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv4/dhcp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv4/etharp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv4/icmp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv4/igmp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv4/ip4.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv4/ip4_napt.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv4/ip4_addr.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv4/ip4_frag.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv6/dhcp6.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv6/ethip6.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv6/icmp6.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv6/inet6.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv6/ip6.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv6/ip6_addr.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv6/ip6_frag.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv6/mld6.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/core/ipv6/nd6.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ethernet.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/bridgeif.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/bridgeif_fdb.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/slipif.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/auth.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/ccp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/chap-md5.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/chap-new.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/chap_ms.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/demand.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/eap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/ecp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/eui64.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/fsm.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/ipcp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/ipv6cp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/lcp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/magic.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/mppe.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/multilink.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/ppp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/pppapi.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/pppcrypt.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/pppoe.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/pppol2tp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/pppos.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/upap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/utils.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/vj.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/port/hooks/tcp_isn_default.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/port/hooks/lwip_default_hooks.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/port/debug/lwip_debug.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/port/sockets_ext.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/port/freertos/sys_arch.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/port/if_index.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/port/acd_dhcp_check.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/port/esp32xx/vfs_lwip.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/apps/ping/esp_ping.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/apps/ping/ping.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/apps/ping/ping_sock.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/polarssl/arc4.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/polarssl/des.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/polarssl/md4.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/polarssl/md5.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/lwip/src/netif/ppp/polarssl/sha1.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/lwip/apps/dhcpserver/dhcpserver.c" ],
+            "include_dirs": [ "include", "include/apps", "include/apps/sntp", "lwip/src/include", "port/include", "port/freertos/include/", "port/esp32xx/include", "port/esp32xx/include/arch", "port/esp32xx/include/sys" ]
+        },
         "main": {
             "alias": "idf::main",
             "target": "___idf_main",
@@ -365,13 +575,13 @@
             "dir": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [],
-            "priv_reqs": [],
+            "reqs": [ "esp_driver_gpio", "esp_wifi", "nvs_flash", "esp_event", "esp_netif", "mqtt", "json" ],
+            "priv_reqs": [ "spi_flash" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/main/libmain.a",
-            "sources": [ "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/main/main.c", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/MCUSilk/CPU_usage.c", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/MCUSilk/isr_trace.c" ],
-            "include_dirs": [ ".", "../../../MCUSilk" ]
+            "sources": [ "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/main/main.c", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/MCUSilk/CPU_usage.c", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/MCUSilk/isr_trace.c", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/MCUSilk/AWS_WIFI.c", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/root_ca.pem.S", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/device.crt.S", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/private.key.S", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/config.json.S" ],
+            "include_dirs": [ ".", "../../../MCUSilk", "../../../AWS_WIFI" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -388,6 +598,21 @@
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/mbedtls/esp_crt_bundle/esp_crt_bundle.c", "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/x509_crt_bundle.S" ],
             "include_dirs": [ "port/include", "mbedtls/include", "mbedtls/library", "esp_crt_bundle/include" ]
         },
+        "mqtt": {
+            "alias": "idf::mqtt",
+            "target": "___idf_mqtt",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/mqtt",
+            "type": "LIBRARY",
+            "lib": "__idf_mqtt",
+            "reqs": [ "esp_event", "tcp_transport" ],
+            "priv_reqs": [ "esp_timer", "http_parser", "esp_hw_support", "heap" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/mqtt/libmqtt.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_outbox.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/mqtt/esp-mqtt/lib/platform_esp32_idf.c" ],
+            "include_dirs": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/mqtt/esp-mqtt/include" ]
+        },
         "newlib": {
             "alias": "idf::newlib",
             "target": "___idf_newlib",
@@ -402,6 +627,21 @@
             "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/newlib/libnewlib.a",
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/init.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/abort.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/assert.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/heap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/locks.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/poll.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/pthread.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/random.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/getentropy.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/termios.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/stdatomic.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/time.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/sysconf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/realpath.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/scandir.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/syscalls.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/reent_syscalls.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/port/esp_time_impl.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/flockfile.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/reent_init.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/newlib_init.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/newlib/src/port/esp_time_impl.c" ],
             "include_dirs": [ "platform_include" ]
+        },
+        "nvs_flash": {
+            "alias": "idf::nvs_flash",
+            "target": "___idf_nvs_flash",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash",
+            "type": "LIBRARY",
+            "lib": "__idf_nvs_flash",
+            "reqs": [ "esp_partition" ],
+            "priv_reqs": [ "spi_flash", "newlib" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/nvs_flash/libnvs_flash.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_api.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_cxx_api.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_item_hash_list.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_page.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_pagemanager.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_storage.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_handle_simple.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_handle_locked.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_partition.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_partition_lookup.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_partition_manager.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_types.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_platform.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_bootloader.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_encrypted_partition.cpp", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_bootloader_aes.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/nvs_flash/src/nvs_bootloader_xts_aes.c" ],
+            "include_dirs": [ "include" ]
         },
         "partition_table": {
             "alias": "idf::partition_table",
@@ -462,6 +702,51 @@
             "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/spi_flash/libspi_flash.a",
             "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/flash_brownout_hook.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_chip_drivers.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_chip_generic.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_chip_issi.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_chip_mxic.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_chip_gd.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_chip_winbond.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_chip_boya.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_chip_mxic_opi.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_chip_th.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/memspi_host_driver.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/cache_utils.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/flash_mmap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/flash_ops.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_wrap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/esp_flash_api.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/esp_flash_spi_init.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_os_func_app.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/spi_flash/spi_flash_os_func_noos.c" ],
             "include_dirs": [ "include" ]
+        },
+        "tcp_transport": {
+            "alias": "idf::tcp_transport",
+            "target": "___idf_tcp_transport",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/tcp_transport",
+            "type": "LIBRARY",
+            "lib": "__idf_tcp_transport",
+            "reqs": [ "esp-tls", "lwip", "esp_timer" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/tcp_transport/libtcp_transport.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/tcp_transport/transport.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/tcp_transport/transport_ssl.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/tcp_transport/transport_internal.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/tcp_transport/transport_socks_proxy.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/tcp_transport/transport_ws.c" ],
+            "include_dirs": [ "include" ]
+        },
+        "vfs": {
+            "alias": "idf::vfs",
+            "target": "___idf_vfs",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/vfs",
+            "type": "LIBRARY",
+            "lib": "__idf_vfs",
+            "reqs": [],
+            "priv_reqs": [ "esp_timer", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_vfs_console" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/vfs/libvfs.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/vfs/vfs.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/vfs/vfs_eventfd.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/vfs/vfs_semihost.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/vfs/nullfs.c" ],
+            "include_dirs": [ "include" ]
+        },
+        "wpa_supplicant": {
+            "alias": "idf::wpa_supplicant",
+            "target": "___idf_wpa_supplicant",
+            "prefix": "idf",
+            "dir": "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant",
+            "type": "LIBRARY",
+            "lib": "__idf_wpa_supplicant",
+            "reqs": [],
+            "priv_reqs": [ "mbedtls", "esp_timer", "esp_wifi" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build/esp-idf/wpa_supplicant/libwpa_supplicant.a",
+            "sources": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/port/os_xtensa.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/port/eloop.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/ap/ap_config.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/ap/ieee802_1x.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/ap/wpa_auth.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/ap/wpa_auth_ie.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/ap/pmksa_cache_auth.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/ap/sta_info.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/ap/ieee802_11.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/ap/comeback_token.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/common/sae.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/common/dragonfly.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/common/wpa_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/utils/bitfield.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/aes-siv.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/sha256-kdf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/ccmp.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/aes-gcm.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/crypto_ops.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/dh_group5.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/dh_groups.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/ms_funcs.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/sha1-tlsprf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/sha256-tlsprf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/sha384-tlsprf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/sha256-prf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/sha1-prf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/sha384-prf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/md4-internal.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/sha1-tprf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_common/eap_wsc_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/common/ieee802_11_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/chap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_mschapv2.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_peap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_peap_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_tls.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_tls_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_ttls.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/mschapv2.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_fast.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_fast_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_fast_pac.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/rsn_supp/pmksa_cache.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa_ie.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/utils/base64.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/utils/common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/utils/ext_password.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/utils/uuid.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/utils/wpabuf.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/utils/wpa_debug.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/utils/json.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/wps/wps.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/wps/wps_attr_build.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/wps/wps_attr_process.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/wps/wps_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/wps/wps_enrollee.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/common/sae_pk.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_eap_client.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa2_api_port.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa_main.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpas_glue.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_common.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wps.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa3.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_owe.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_hostap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/tls_mbedtls.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls-bignum.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls-rsa.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls-ec.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/rc4.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/des-internal.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpbkdf2.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/aes-wrap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/aes-unwrap.c", "C:/Users/moham/esp/v5.5.1/esp-idf/components/wpa_supplicant/src/crypto/aes-ccm.c" ],
+            "include_dirs": [ "include", "port/include", "esp_supplicant/include" ]
         },
         "xtensa": {
             "alias": "idf::xtensa",
@@ -610,7 +895,7 @@
             "priv_reqs": [ "http_parser", "esp_timer", "lwip" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/build", "esp-tls-crypto" ]
+            "include_dirs": [ "C:/Users/moham/esp/v5.5.1/esp-idf/components/esp-tls", "esp-tls-crypto" ]
         },
         "esp_adc": {
             "alias": "idf::esp_adc",
@@ -1450,7 +1735,7 @@
             "priv_reqs": [ "vfs" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": []
+            "include_dirs": [ "include", "include/apps", "include/apps/sntp", "lwip/src/include", "port/include", "port/freertos/include/", "port/esp32xx/include", "port/esp32xx/include/arch", "port/esp32xx/include/sys" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -1782,11 +2067,11 @@
             "prefix": "idf",
             "dir": "E:/projects/ESP32/Microtherium/ESP32-FreeRTOS-CPU-Monitor/Examples/ESP32/main",
             "lib": "__idf_main",
-            "reqs": [],
-            "priv_reqs": [],
+            "reqs": [ "esp_driver_gpio", "esp_wifi", "nvs_flash", "esp_event", "esp_netif", "mqtt", "json" ],
+            "priv_reqs": [ "spi_flash" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ ".", "../../../MCUSilk" ]
+            "include_dirs": [ ".", "../../../MCUSilk", "../../../AWS_WIFI" ]
         }
     },
     "debug_prefix_map_gdbinit": "",
