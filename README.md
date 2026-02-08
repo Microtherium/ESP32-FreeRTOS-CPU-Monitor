@@ -1,4 +1,4 @@
-# ESP32 CPU and Memory Usage Monitor
+# ESP32 CPU, Memory Usage, and Interrupts Monitor
 
 
 This project measures CPU usage per task on an ESP32 (FreeRTOS), streams the data over UART as JSON, and displays it live on a desktop GUI.
